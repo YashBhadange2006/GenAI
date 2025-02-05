@@ -1,0 +1,122 @@
+body {
+
+    color: black;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Prevent scrollbars from the animated elements */
+  }
+  
+  .shape {
+    position: absolute;
+    border-radius: 50%; /* Makes the shapes circular */
+    opacity: 0.8;
+    animation: float 6s ease-in-out infinite; /* Animation for floating effect */
+}
+
+.purple {
+    background-color: #7b3dff;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    top: 20%; /* Position from the top */
+    left: 10%; /* Position from the left */
+}
+
+.blue {
+    background-color: #00aaff;
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    top: 50%; /* Position from the top */
+    left: 30%; /* Position from the left */
+}
+
+.orange {
+    background-color: #ff7f50;
+    width: 120px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
+    top: 70%; /* Position from the top */
+    left: 60%; /* Position from the left */
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+  
+  .container {
+    
+ 
+    align-items: center; /* For flexbox alignment, if needed */
+    justify-content: center; /* For flexbox alignment, if needed */
+    width: 400px;
+    height: 300px;
+    padding:40px;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value for transparency */
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; 
+    transition: transform ease 0.3s; /* For a smooth scaling transition */
+    animation-name: example;
+    animation-duration: 3s;
+  }
+  
+  /* Hover effect for scaling */
+  .container:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes example {
+      /* Add animation keyframes here if needed */
+  } 
+  
+    
+
+
+
+h1 {
+    color: black; 
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6; 
+}
+
+button {
+    margin-top: 25px;;
+    padding: 15px 25px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.6s ease-in-out; 
+}
+
+button:hover {
+    background-color: #45a049; 
+    box-shadow: 0 0 10px #d538ff; 
+    transform: scale(1.05);
+}
+
+#fact-display { 
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
+  }
+  
+#fact-display.show {
+    opacity: 1;  
+}
+
+#three-canvas {
+  width: 100%; 
+  height: 400px;
+  display: block; 
+}
